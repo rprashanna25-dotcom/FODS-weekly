@@ -1,12 +1,23 @@
 """
-program performs operations on matrices.
-it checks dimension compatibility before carrying out calculations.
+program performs operations on matrices
+it checks dimension compatibility before carrying out calculations
 """
 
 import numpy as np
 
 def create_matrix_from_input(rows, cols):
-    return np.array([list(map(int, input().split())) for _ in range(rows)])
+    #ensures correct number of elements per row
+    matrix = []
+
+    for i in range(rows):
+        row = list(map(int, input().split()))
+
+        if len(row) != cols:
+            raise ValueError("Incorrect number of elements in a row")
+
+        matrix.append(row)
+
+    return np.array(matrix)
 
 
 def calculate_matrix_results(m1, m2, r1, c1, r2, c2):
@@ -42,5 +53,5 @@ def run():
         print("error:", e)
 
 
-if __name__ == "__run__":
+if __name__ == "__main__":
     run()

@@ -19,5 +19,5 @@ def run():
     create_random_matrix()
 
 
-if __name__ == "__run__":
+if __name__ == "__main__":
     run()

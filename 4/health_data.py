@@ -46,5 +46,5 @@ def run():
         print("csv file not found")
 
 
-if __name__ == "__run__":
+if __name__ == "__main__":
     run()

@@ -25,5 +25,5 @@ def run():
     process_array(arr)
 
 
-if __name__ == "__run__":
+if __name__ == "__main__":
     run()
